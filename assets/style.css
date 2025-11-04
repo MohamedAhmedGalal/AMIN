@@ -1,0 +1,41 @@
+/* Basic responsive styling for AMIN starter site */
+:root{
+  --primary:#0b6fb1;
+  --accent:#2aa876;
+  --bg:#ffffff;
+  --text:#222;
+  --muted:#666;
+  --maxwidth:1000px;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);line-height:1.5}
+.container{max-width:var(--maxwidth);margin:0 auto;padding:28px}
+.header{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--primary),#2b9bd3);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.nav a{margin-left:14px;text-decoration:none;color:var(--muted);font-weight:600}
+.hero{display:flex;flex-direction:column;gap:16px;padding:36px 0}
+.h1{font-size:28px;margin:0}
+.lead{color:var(--muted);max-width:700px}
+.cta{display:inline-block;background:var(--primary);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:24px}
+.card{padding:18px;border-radius:8px;border:1px solid #eee;background:#fcfeff}
+.small{color:var(--muted);font-size:14px}
+.section{padding:20px 0;border-top:1px solid #f0f0f0;margin-top:18px}
+
+/* Language toggle at top */
+.lang{font-size:14px}
+
+/* Arabic specific helpers (will apply on Arabic page) */
+[dir="rtl"]{direction:rtl}
+[dir="rtl"] .nav a{margin-left:0;margin-right:14px}
+footer{padding:20px 0;color:var(--muted);font-size:14px;text-align:center}
+
+/* Responsive */
+@media (max-width:720px){
+  .header{flex-direction:column;align-items:flex-start}
+  .logo{width:44px;height:44px}
+  .h1{font-size:22px}
+}
